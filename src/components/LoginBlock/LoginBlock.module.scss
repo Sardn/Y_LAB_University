@@ -1,0 +1,28 @@
+@import '../../styles/abstract/variables.scss';
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  gap: 1rem;
+  padding: 2rem;
+}
+.field {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid $gray-color;
+}
+.islogin {
+  margin-bottom: 2rem;
+}
+.islogin button {
+  background-color: $main-color;
+  transition: 0.5s;
+
+  &:hover {
+    color: $main-color;
+    background-color: $white-color-1;
+    border-color: $main-color;
+    transition: 0.5s;
+  }
+}

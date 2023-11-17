@@ -1,0 +1,26 @@
+@mixin button($button-color, $text-color: white) {
+  padding: 0.5em 1em;
+  background-color: $button-color;
+  border-radius: 1rem;
+  border-style: none;
+  color: $text-color;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.25s;
+  transition: 0.5s;
+
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: darken($button-color, 10);
+      color: $text-color;
+      transition: 0.5s;
+    }
+  }
+
+  &:active {
+    background-color: darken($button-color, 5);
+  }
+}
