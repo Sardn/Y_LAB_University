@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './LoginBlock.module.scss';
-import { auth } from '../../utils/service/auth';
+// import { auth } from '../../utils/service/auth';
 
 const Login: FC = () => {
   const [email, setEmail] = useState<string>('');
@@ -24,10 +25,10 @@ const Login: FC = () => {
     try {
       navigate('/');
       e.preventDefault();
-      const data = await auth.register({ email, password });
-      if (data) {
-        setIsLogin(!isLogin);
-      }
+      // const data = await auth.register({ email, password });
+      // if (data) {
+      //   setIsLogin(!isLogin);
+      // }
     } catch (err: any) {
       const error = err.response?.data.message;
       console.log(error);
